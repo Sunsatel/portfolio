@@ -6,8 +6,7 @@ function ContactMe() {
         <Container id="contact">
             <Title>Contact with Me</Title>
             <Wrapper>
-                <p><addr>kester@outlook.com</addr></p>
-                <p><addr>kester@gmail.com</addr></p>
+                <p><addr>carloavila.personal@gmail.com</addr></p>
                 <br/>
                 <p>I'll always welcome. I'm waiting even very late at night.</p>
             </Wrapper>

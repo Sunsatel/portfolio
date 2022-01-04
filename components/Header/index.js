@@ -12,7 +12,7 @@ function Header() {
                 <AboutContainer>
                     <Zoom>
                         <Description 
-                            title="Kester Smith"
+                            title="Carlo Mario"
                             type="primary"
                         />
                     </Zoom>
