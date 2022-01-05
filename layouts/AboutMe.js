@@ -17,7 +17,7 @@ function AboutMe() {
           <SpringCard>
             <Card title="Education">
               <p>
-                I graduated from Volgograd State University with a bachelor degree in computer sciense.
+                I graduated from Universidad del Cauca with a bachelor degree in computer sciense.
                 I set my first step as a web deveoper when I was a student, I really enjoyed taking part time job online in my spare time.
                 Kent C. Dodds is one of my favourite teachers and I'm the best student of him.
                 He gave me enormous knowledges on React. I've great attemption to follow his coding style because those're excellent.
