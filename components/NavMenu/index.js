@@ -17,7 +17,6 @@ function NavMenu() {
     const [scrollY, setScrollY] = useState(0);
     const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
     const {theme, setTheme} = useTheme()
-
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -46,8 +45,8 @@ function NavMenu() {
         </div>
         <FoxUL> {
             paths.map(path => ( <li key = { path.url } >
-                <Link href = { `#${path.url}` } >
-                <FoxLink > { path.title } </FoxLink>
+                <Link href = { `#${path.url}` }>
+                <FoxLink> { path.title } </FoxLink>
                 </Link> </li>
             ))
         }

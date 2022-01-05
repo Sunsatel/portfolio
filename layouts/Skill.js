@@ -32,7 +32,7 @@ function Skill() {
 
 function SkillComment() {
   return (
-    <div tw="w-2/5">
+    <div tw="w-full md:w-2/5">
       <Title type="sub">Top notch Developer</Title>
       <Title type="sub">super clean and well-structured coding style</Title>
       <p>
@@ -57,7 +57,7 @@ function SkillProgress() {
 }
 
 const SkillProContainer = styled.div`
-  ${tw`w-3/5`}
+  ${tw`w-full md:w-3/5`}
 `
 
 const data = {

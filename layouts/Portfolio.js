@@ -20,6 +20,7 @@ function Portfolio() {
               src={`img/portfolio/${index + 1}.png`}
               title={item.title}
               desc={item.desc}
+              url={item.url}
             />
             </Zoom>
           ))}

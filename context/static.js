@@ -25,26 +25,32 @@ const portfolio = [
     {
         title: 'school',
         desc: 'online lesson',
+        url: 'https://www.lewistonpublicschools.org',
     },
     {
         title: 'library',
         desc: 'University of North Alabama',
+        url: 'https://ir.una.edu',
     },
     {
         title: 'shopping',
         desc: 'e-Commercial',
+        url: 'https://shop.nola.com',
     },
     {
         title: 'travel',
-        desc: 'breaking out films'
+        desc: 'breaking out films',
+        url: 'http://rad.tetongravity.com',
     },
     {
         title: 'gallery',
         desc: 'history of india',
+        url: 'https://xag.jagjaguwar.com',
     },
     {
         title: 'school',
         desc: 'online lesson',
+        url: 'https://www.msad52.org',
     },
 ]
 
