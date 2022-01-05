@@ -10,7 +10,7 @@ const Container = styled.div`
 `
 
 const ContentWrapper = styled.div`
-    ${tw`grid grid-cols-3 gap-10 pt-5 m-auto mt-5`}
+    ${tw`grid grid-cols-1 gap-10 pt-5 m-auto mt-5 lg:grid-cols-3`}
 `
 
 export {

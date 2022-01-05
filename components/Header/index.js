@@ -36,7 +36,7 @@ function Header() {
                     </Slide>
                 </AboutContainer>
                 <AboutImgWrapper>
-                    <img src="img/about.png"/>
+                    <img src="img/about.png" width='320px'/>
                 </AboutImgWrapper>
                 </div>
             </ParticleContainer>

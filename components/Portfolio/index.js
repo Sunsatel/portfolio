@@ -1,5 +1,6 @@
 import Particles from "react-tsparticles";
 import {ItemWrapper, ItemContent} from './style'
+import {useTheme} from 'next-themes'
 
 function PortfolioItem({...props}) {
     return (
@@ -16,19 +17,21 @@ function PortfolioItem({...props}) {
 }
 
 function ParticleWrapper({children}) {
-    return (
-        <div className="relative">
-        <Particles
-          params={param}
-        />
-      <div className='absolute top-0'>
-          {children}
-      </div>
+  const {theme} = useTheme()
+  
+  return (
+      <div className="relative">
+      <Particles
+        params={theme==='light' ? whiteParam : darkParam}
+      />
+    <div className='absolute top-0'>
+        {children}
     </div>
-    )
+  </div>
+  )
 }
 
-const param = {
+const whiteParam = {
   particles: {
     color: {
       value: "#000000"
@@ -49,5 +52,28 @@ const param = {
     }
   }
 }
+
+const darkParam = {
+  particles: {
+    color: {
+      value: "#FFFFFF"
+    },
+    line_linked: {
+      color: {
+        value: "#FFFFFF"
+      }
+    },
+    move: {
+      speed: 5,
+    },
+    number: {
+      value: 50
+    },
+    size: {
+      value: 3
+    }
+  }
+}
+
 
 export {PortfolioItem, ParticleWrapper}

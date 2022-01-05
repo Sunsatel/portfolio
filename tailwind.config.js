@@ -3,6 +3,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       width: {
@@ -24,9 +25,15 @@ module.exports = {
       },
       backgroundColor: {
         primary: '#444444',
+        secondary: '#222831',
+        lightgrey: '#393e46',
       },
       colors: {
         dark: '#444444',
+      },
+      boxShadow: {
+        blue: '0 4px 14px 0 rgba(19, 51, 81, 0.4)',
+        white: '0 4px 14px 0 rgba(255, 255, 255, 0.7)'
       },
       fontFamily: {
         poppins: [

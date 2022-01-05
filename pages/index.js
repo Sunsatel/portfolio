@@ -15,7 +15,7 @@ export default function Home() {
 }
 
 const HomeWrapper = styled.div`
-    ${tw`px-20 m-auto bg-white max-w-custom font-poppins text-dark`}
+    ${tw`px-20 m-auto bg-white max-w-custom font-poppins text-dark dark:bg-secondary dark:text-white`}
 `
 
 
