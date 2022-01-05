@@ -41,7 +41,7 @@ function NavMenu() {
     const renderNavItems = () => (
         paths.map(path => ( <li key = { path.url } >
             <Link href = { `#${path.url}` }>
-            <FoxLink onClick={() => setToggleMenu(!toggleMenu)}> { path.title } </FoxLink>
+            <FoxLink onClick={() => toggleMenuClick()}> { path.title } </FoxLink>
             </Link> </li>
         ))
     )
