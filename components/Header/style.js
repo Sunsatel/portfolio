@@ -5,11 +5,11 @@ const HeaderWrapper = styled.div`
 `
 
 const AboutContainer = styled.div`
-    ${tw`flex flex-col w-4/5 m-auto lg:w-2/3`}
+    ${tw`flex flex-col w-3/5 m-auto lg:w-1/2`}
 `
 
 const AboutImgWrapper = styled.div`
-    ${tw`w-1/5 lg:w-1/3`}
+    ${tw`w-2/5 lg:w-1/2`}
 `
 
 export {

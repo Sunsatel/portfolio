@@ -1,6 +1,6 @@
 import { paths } from '../../context/static'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import tw from 'twin.macro'
 import {useTheme} from 'next-themes'
@@ -15,11 +15,12 @@ import {
 
 function NavMenu() {
     
-    const [toggleMenu, setToggleMenu] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(true)
     const [scrollY, setScrollY] = useState(0);
     const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
     const {theme, setTheme} = useTheme()
-    
+    const toggleRef = useRef(null)
+
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -45,6 +46,11 @@ function NavMenu() {
         ))
     )
     
+    const toggleMenuClick = () => {
+        toggleRef.current.classList.toggle('translate-x-full')
+        setToggleMenu(!toggleMenu)
+    }
+
     return ( <div tw="m-auto flex justify-center">
         <NavMenuWrapper className = {
             backgroundTransparacy > 0.9 ?
@@ -59,13 +65,10 @@ function NavMenu() {
             { renderNavItems() }
         </ResponsivePanel>
         
-        { toggleMenu &&
-            <MobileResponsivePanel>
-                { renderNavItems() }
-            </MobileResponsivePanel>
-        }
-
-
+        <MobileResponsivePanel ref={toggleRef}>
+            { renderNavItems() }
+        </MobileResponsivePanel>
+    
         <div>
             <button onClick={() => setTheme(theme==='light' ? 'dark' : 'light')}>
                 <svg
@@ -93,7 +96,7 @@ function NavMenu() {
             </button>
         </div>
         <div className="ml-5 md:hidden">
-            <button onClick={() => setToggleMenu(!toggleMenu)}>
+            <button onClick={toggleMenuClick}>
                 <div className={`h-1 mt-1 bg-white w-7 transition duration-300 ${toggleMenu ? 'rotate-135 top-3' : 'rotate-0'}`}></div>
                 <div className="h-1 mt-1 bg-white w-7"></div>
                 <div className="h-1 mt-1 bg-white w-7"></div>

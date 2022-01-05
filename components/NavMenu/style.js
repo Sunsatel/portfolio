@@ -17,7 +17,7 @@ const ResponsivePanel = styled.div`
 `
 
 const MobileResponsivePanel = styled.div`
-    ${tw`gap-2 p-5 dark:bg-orange bg-indigo absolute left-0 right-0 flex-col w-full text-center top-[80px] md:hidden`}
+    ${tw`transition-transform transform duration-300 gap-2 p-5 dark:bg-orange bg-indigo absolute left-0 right-0 flex-col w-full text-center top-[80px] md:hidden`}
 `
 
 export {
