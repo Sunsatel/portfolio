@@ -15,7 +15,7 @@ import {
 
 function NavMenu() {
     
-    const [toggleMenu, setToggleMenu] = useState(true)
+    const [toggleMenu, setToggleMenu] = useState(false)
     const [scrollY, setScrollY] = useState(0);
     const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
     const {theme, setTheme} = useTheme()
@@ -46,11 +46,15 @@ function NavMenu() {
         ))
     )
     
+    useEffect(() => {
+        toggleRef.current.classList.toggle('translate-x-full')
+    }, [])
+
     const toggleMenuClick = () => {
         toggleRef.current.classList.toggle('translate-x-full')
         setToggleMenu(!toggleMenu)
     }
-
+    
     return ( <div tw="m-auto flex justify-center">
         <NavMenuWrapper className = {
             backgroundTransparacy > 0.9 ?
@@ -97,9 +101,9 @@ function NavMenu() {
         </div>
         <div className="ml-5 md:hidden">
             <button onClick={toggleMenuClick}>
-                <div className={`h-1 mt-1 bg-white w-7 transition duration-300 ${toggleMenu ? 'rotate-135 top-3' : 'rotate-0'}`}></div>
-                <div className="h-1 mt-1 bg-white w-7"></div>
-                <div className="h-1 mt-1 bg-white w-7"></div>
+                <div className={`h-1 mt-1 bg-white w-7 transition duration-300 ${toggleMenu ? 'rotate-45 translate-y-1.5' : 'rotate-0'}`}></div>
+                <div className={`h-1 mt-1 transition duration-300 bg-white w-7 ${toggleMenu ? 'opacity-0' : 'opacity-100'}`}></div>
+                <div className={`h-1 mt-1 bg-white w-7 transition duration-300 ${toggleMenu ? '-rotate-45 -translate-y-2.5 -translate-x-0.5' : 'rotate-0'}`}></div>
             </button>
         </div>
         </FoxUL>
