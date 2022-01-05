@@ -1,7 +1,7 @@
 import tw, {styled} from 'twin.macro'
 
 const HeaderWrapper = styled.div`
-    ${tw`bg-blue-500 dark:bg-lightgrey w-100vw max-w-custom`}
+    ${tw`bg-blue-500 dark:bg-lightgrey w-100vw h-[400px] md:h-full max-w-custom`}
 `
 
 const AboutContainer = styled.div`

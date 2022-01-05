@@ -27,6 +27,8 @@ module.exports = {
         primary: '#444444',
         secondary: '#222831',
         lightgrey: '#393e46',
+        indigo: '#5851f9',
+        orange: '#b55400',
       },
       colors: {
         dark: '#444444',

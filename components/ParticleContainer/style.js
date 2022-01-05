@@ -1,7 +1,7 @@
 import tw, {styled} from 'twin.macro'
 
 const ParticleWrapper = styled.div`
-    ${tw`relative w-full`}
+    ${tw`relative w-full h-[400px] md:h-full`}
 `
 
 const ContentWrapper = styled.div`

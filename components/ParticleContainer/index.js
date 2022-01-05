@@ -9,7 +9,7 @@ function ParticleContainer({children, ...res}) {
     
     return (
         <ParticleWrapper {...res}>
-            <Particles params={params} />
+            <Particles params={params} className='h-[400px] md:h-full' />
             <ContentWrapper>
                 {children}
             </ContentWrapper>
