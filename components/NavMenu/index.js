@@ -80,7 +80,7 @@ function NavMenu() {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 stroke="currentColor"
-                className="w-6 h-6 text-gray-800 dark:text-gray-200"
+                className="w-6 h-6 text-dark dark:text-gray-200"
                 >
                 { theme === 'light' ? <path
                     strokeLinecap="round"
